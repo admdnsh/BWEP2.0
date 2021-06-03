@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formal Page</title>
+	</head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+
+<body id="services">
+
+	<header>
+		<div>
+		<img src="images/logo.png">
+		<a href="custompage.html">CUSTOM</a>
+		<a href="index.html">HOME</a>
+		<h2></h2>
+		</div>
+	</header>
+
+	<div class="wrap">
+		<div class="side">
+
+			<div class="greetingsList">
+				<h3>Click on greetings list below to insert on preview cards</h3>
+				<div id="g1" class="greetings"style="margin-top:10px;">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</div>
+				<div id="g2" class="greetings"style="margin-top:10px;">Salam Sejahtera</div>
+				<div id="g4" class="greetings"style="margin-top:10px;">Greetings!</div>
+			</div>
+
+			<div class="selection">
+				<h3>Choose your background:</h3>
+				<img src="images/formal1-custom.jpg" id="styleOne">
+				<img src="images/formal2-custom.jpg" id="styleTwo">
+			</div>
+
+			<select onchange="fontFamily(this.value)" id="btn">
+				<option value="0">Choose Font Style</option>
+				<option value="2">Tahoma</option>
+				<option value="3">Helvetica</option>
+				<option value="4">Lucida Console</option>
+				<option value="5">Calibri</option>
+			</select>
+
+			 <select onchange="fontsize(this.value)">
+			 	<option value="0">Choose Font Size</option>
+			 	<option value="1">14px</option>
+			 	<option value="2">16px</option>
+			 	<option value="3">18px</option>
+			 	<option value="4">20px</option>
+			 </select>
+
+			<div class="enter">
+				<input type="text" placeholder="Enter recipient's name" id="name">
+				<input type="text" placeholder="Enter name of the event" id="event">
+				<input type="text" placeholder="Enter Sponsors" id="host">
+				<input type="date" placeholder="Enter date" id="date">
+				<input type="time" placeholder="Enter date" id="time">
+				<input type="text" placeholder="Enter address" id="address">
+
+				<button onclick="saveContent()" id="saveBtn">Save as favourite content</button>
+				<button onclick="loadContent()" id="loadBtn">Load favourite content</button>
+				<button onclick="clearContent()" id="clearBtn">Reset</button>
+				<div id="backBtn">
+			<button onclick="backHome()" id="bBtn">Back to Homepage</button>
+			</div>
+			
+		</div>
+
+		</div>
+
+		<div class="main"  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<div class="edit_box1" id="cbox">
+					<h2 id="gresult" style="text-align: center;" placeholder="Choose Greetings From The List Provided"></h2>
+					<div class="names" id="name1" style="text-align: center; margin-top: 50px;" placeholder="Enter Recipient Name"></div>
+					<h3>Your Have Been Invited for:</h3>
+					<h1 class="names" id="event1" style="text-align: center; margin-top: 30px;" placeholder="Enter Event Name"></h1>
+					<h3 style="text-align: center; margin-top: 50px;">Sponsored By:</h3>
+					<div class="names" id="host1" style="text-align: center; margin-top: 10px;" placeholder="Enter Sponsors"></div>
+					<div class="names" id="date1" style="text-align: center; margin-top: 60px;" placeholder="Enter Date"></div>
+					<div class="names" id="time1" style="text-align: center; margin-top: 10px;" placeholder="Enter Time"></div>
+					<div class="names" id="address1" style="text-align: center; margin-top: 100px;" placeholder="Enter Address"></div>
+				</div>
+		</div>
+		<div class="send_box">
+					<input type="email" placeholder="Enter Recipient's Email Address" size="25">
+					<input type="submit" id="submitBtn" value="Submit to the recipient">
+				</div>
+	</div>
+
+	</div>
+	<div id="popup" class="popup">
+  	<div class="popup-content">
+    	<span class="close">&times;</span>
+    	<p>The Invitation Has Been Sent To The Recipient</p>
+  	</div>
+	</div>
+	<footer>
+		<h3>BARUNAIS! @copyright 2021</h3>
+	</footer>
+	</body>
+
+	<script type="text/javascript">
+		styleOne.addEventListener("click",letter =>{document.getElementById("cbox").style.backgroundImage = "url(images/formal1-custom.jpg)";})
+		styleTwo.addEventListener("click",letter =>{document.getElementById("cbox").style.backgroundImage = "url(images/formal2-custom.jpg)";})
+
+		function backHome() {
+			window.history.back();
+		}
+
+		function fontFamily(value){
+		if(value==1){
+			document.getElementById("cbox").style.fontFamily = "Arial";
+		}
+		else if(value==2){
+			document.getElementById("cbox").style.fontFamily = "Tahoma";
+		}
+		else if(value==3){
+			document.getElementById("cbox").style.fontFamily = "Helvetica";
+		}
+		else if(value==4){
+			document.getElementById("cbox").style.fontFamily = "Lucida Console";
+		}
+		else if(value==5){
+			document.getElementById("cbox").style.fontFamily = "Calibri";
+		}
+		else if(value==6){
+			document.getElementById("cbox").style.fontFamily = "Lucida Handwriting";
+		}
+	}
+	function fontsize(value){
+			var canvas = document.getElementById("canvas");	
+	if (value==1) {
+				document.getElementById("name1").style.fontSize="14px";
+				document.getElementById("event1").style.fontSize="14px"; 
+				document.getElementById("date1").style.fontSize="14px";
+				document.getElementById("time1").style.fontSize="14px";
+				document.getElementById("host1").style.fontSize="14px";
+			}
+			else if (value==2) {
+				document.getElementById("name1").style.fontSize="16px";
+				document.getElementById("event1").style.fontSize="16px";
+				document.getElementById("date1").style.fontSize="16px";
+				document.getElementById("time1").style.fontSize="16px";
+				document.getElementById("host1").style.fontSize="16px";
+			}
+			else if (value==3) {
+				document.getElementById("name1").style.fontSize="18px";
+				document.getElementById("event1").style.fontSize="18px";
+				document.getElementById("date1").style.fontSize="18px";
+				document.getElementById("time1").style.fontSize="18px";
+				document.getElementById("host1").style.fontSize="18px";
+			}
+			else if (value==4) {
+				document.getElementById("name1").style.fontSize="20px";
+				document.getElementById("event1").style.fontSize="20px";
+				document.getElementById("date1").style.fontSize="20px";
+				document.getElementById("time1").style.fontSize="20px";
+				document.getElementById("host1").style.fontSize="20px";
+			}
+		}
+
+		var n = document.getElementById("name");
+		var e = document.getElementById("event");
+		var a = document.getElementById("address");
+		var d = document.getElementById("date");
+		var t = document.getElementById("time");
+		var h = document.getElementById("host");
+
+		var display_n = document.getElementById("name1");
+		var display_e = document.getElementById("event1");
+		var display_a = document.getElementById("address1")
+		var display_d = document.getElementById("date1");
+		var display_t = document.getElementById("time1");
+		var display_h = document.getElementById("host1");
+
+		n.addEventListener('input', letter =>{display_n.textContent = letter.target.value;})
+		e.addEventListener('input', letter =>{display_e.textContent = letter.target.value;})
+		a.addEventListener('input', letter =>{display_a.textContent = letter.target.value;})
+		d.addEventListener('input', letter =>{display_d.textContent = letter.target.value;})
+		t.addEventListener('input', letter =>{display_t.textContent = letter.target.value;})
+		h.addEventListener('input', letter =>{display_h.textContent = letter.target.value;})
+
+	
+
+	function saveContent() {
+		localStorage.setItem("name", n.value);
+		localStorage.setItem("event", e.value);
+		localStorage.setItem("address", a.value);
+		localStorage.setItem("date", d.value);
+		localStorage.setItem("time", t.value);
+		localStorage.setItem("host", h.value);
+
+	}
+
+	function loadContent() {
+		n.value = localStorage.getItem("name");
+		e.value = localStorage.getItem("event");
+		a.value = localStorage.getItem("address");
+		d.value = localStorage.getItem("date");
+		t.value = localStorage.getItem("time");
+		h.value = localStorage.getItem("host");
+
+		name1.innerHTML = localStorage.getItem("name");
+		event1.innerHTML = localStorage.getItem("event");
+		address1.innerHTML = localStorage.getItem("address");
+		date1.innerHTML = localStorage.getItem("date");
+		time1.innerHTML = localStorage.getItem("time");
+		host1.innerHTML = localStorage.getItem("host");
+	}
+
+	function clearContent(){
+		window.location.reload();
+	}
+
+		g1.addEventListener("click", letter => {document.getElementById("gresult").innerHTML = "السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ";})
+		g2.addEventListener("click", letter => {document.getElementById("gresult").innerHTML = "Salam Sejahtera";})
+		g3.addEventListener("click", letter => {document.getElementById("gresult").innerHTML = "Hello";})
+		g4.addEventListener("click", letter => {document.getElementById("gresult").innerHTML = "Greetings!";})
+		g5.addEventListener("click", letter => {document.getElementById("gresult").innerHTML = "Good Day!";})
+
+		var popup = document.getElementById("popup");
+		var btn = document.getElementById("submitBtn");
+		var span = document.getElementsByClassName("close")[0];
+
+		btn.onclick = function(){
+  			popup.style.display = "block";
+		}
+
+		span.onclick = function() {
+ 			popup.style.display = "none";
+		}
+
+		window.onclick = function(event) {
+  			if (event.target == popup) {
+    		popup.style.display = "none";
+  			}
+		}
+		function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+	</script>
+
+	</html>

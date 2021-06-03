@@ -1,0 +1,500 @@
+	body{
+		margin:0;
+		background-color: #32292f;
+	}
+	header, footer{
+		width: 100%; height: 10vh;
+		display: block;
+		background-color: #705d56;
+		position:  sticky;
+		overflow: hidden;
+		z-index: 999;
+		font-weight: bold;
+	}
+	header>h2{
+		position: sticky;
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+
+	header a{
+		float: right;
+		text-decoration: none; 
+		font-size: 1.2em;
+		color: #000000;
+		display: flex;
+		justify-content: center;
+		padding: 10px;
+		padding-right: 20px;
+	}
+
+	header a:hover{
+		color: #e2ae6c;
+	}
+
+	header img{
+		width: 50px;
+		height: 50px;
+		margin-left: 30px;
+		position: absolute;
+
+	}
+	footer{
+		display: flex;
+		justify-content: center;
+	}
+	/*homepage*/
+	.hmain{
+		display: flex;
+		flex-wrap: wrap;
+		flex:100%;
+		height: 100vh;
+		color: white;
+	}
+	.button{
+		background-color: #624a59;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		margin: auto;
+	}
+
+	.pics{
+		border: 6px solid #f0f7f4;
+		border-radius: 10px;
+		height: 346px;
+		display: inline-block;
+		transition: transform 0.4s ease-out;
+		padding: 5px;
+	}
+
+	.pics:hover{
+		transform: scaleX(-1.0);
+		transition-delay: 0.2s;
+		/*(-6deg);*/
+	}
+	
+
+	.button:hover {
+		color: black;
+	}
+
+	.big_box{
+		width: 500px; height: 100%;
+		text-align: center;
+
+	}
+	
+	}
+	h1, p{
+		text-align: center;
+		color: #e0e0e0;
+	}
+
+	.outer{
+		margin-left: auto; margin-right: auto;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-areas: 
+		"one" 
+		"two"
+		"three" 
+		"four";	
+	}
+
+	footer{
+		position: static;
+		bottom: 0;
+		height: 7vh;
+	}
+
+	@media screen and (max-width: 600px){
+		header{
+			padding-top: 1.5em;
+		}
+		.hmain{
+			padding-top: 1.5em;
+		}
+		.outer{
+			padding-top: 1.5em;
+		}
+		.big_box{
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+			align-items: center;
+			justify-content: center;
+			width: 80%;
+			height: 70%;
+		}
+		.pics{
+			width: 200px;
+			height: 300px;
+		}
+		header{
+			height: 30vh;
+		}
+
+		header a{
+			float: none;
+			text-align: center;
+			margin-left: auto; margin-right: auto;
+		}
+		.wrap{
+			flex-direction: column;
+		}
+
+	}
+	.button{
+		border: 2px solid;
+		border-radius: 5px;
+		display: block;
+
+	}
+	/*customisation pages*/
+	.cbox{
+		width: 500px; height: 290px;
+		border: 2px solid #AAAE8E; 
+		border-radius: 10px;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	.pic{
+		width: 180px; height: 270px;
+		/*margin-top: 10px;
+		padding-right: 5px;*/
+		transition: transform 0.3s ease-out;
+	}
+
+	.pic:hover{
+		transform: scale(1.05);
+	}
+	.cards{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		text-decoration: none;
+		color: black; 
+		font-weight: bold; 
+		font-size: 1.5em;
+		
+	}
+
+	.cards:hover{
+		border: 1px solid black;
+		border-radius: 10px;
+		background-color: #3A606E;
+		color: black;
+		transition: 0.3s ease-in;
+	}
+	.wrap{
+		display: flex;
+		flex: wrap;
+	}
+	@media screen and (max-width: 600px){
+
+		.top h1{
+			margin-top: 40px;
+			font-size: 1.8em;
+		}
+		.mid{
+			height: 150vh;
+			grid-template-areas: 
+			"one"
+			"two"
+			"three";
+		}
+
+		.box{
+			width: 360px; height: 320px;
+			margin-top: 40px; margin-left: auto; margin-right: auto;
+			display: block;
+		}
+
+		.pic{
+			width: 150px; height: 200px;
+
+		}
+
+		.cards{
+			font-size: 1.8em;
+		}
+
+	}
+	#services{
+			background-color: #828E82;
+		}
+	#cservices{
+		background-color: #E7D7C1;
+	}
+	#drag1, #drag2{
+		width: 200px; height: 100px;
+		padding: 10px;
+	}	
+	#div2 {
+		width: 100%;
+ 		height: 100px;
+	}
+	.enter{
+			width: 250px; height: 300px;
+			display: block;
+			margin-top: 20px; margin-left: auto; margin-right: auto;
+		}
+
+		.enter input, button, select{
+			margin-top: 10px; margin-left: auto; margin-right: auto;
+			display: block;
+		}
+		.side{
+			margin-left: 10px;
+		}
+		.greetingsList{
+			width: 300px; height: auto;
+			display: block;
+			margin-top: 10px; margin-left: auto; margin-right: auto;
+			padding: 10px;
+			text-align: center;
+			border: 2px dashed;
+			border-radius: 20px;
+
+		}
+
+		.greetingsList h3{
+			font-size: 1.5em;
+		}
+
+		#saveBtn:hover{
+			background-color: #BF4342;
+			border-radius: 5px;
+		}
+
+		#loadBtn:hover{
+			background-color: #FFBF00;
+			border-radius: 5px;
+		}
+
+		#clearBtn:hover{
+			background-color: #32936F;
+			border-radius: 5px;
+		}
+		#bBtn{
+			background-color: #C14953;
+			border-radius: 10px;
+		}
+		#bBtn:hover{
+			background-color: #848FA5;
+		}
+
+		#g1:hover, #g2:hover, #g3:hover, #g4:hover, #g5:hover{
+			background-color: #607B7D;
+			border-radius: 20px;
+			color: #AAAE8E;
+		}
+
+		.selection{
+			width: 280px; height: 220px;
+			margin-top: 20px; margin-left: auto; margin-right: auto;
+			text-align: center;
+			border: 2px dashed;
+			border-radius: 20px;
+		}
+
+		.selection h3{
+			font-size: 1.3em;
+		}
+		.selection img{
+			display: inline-block;
+			margin-left: 5px;
+			width: 100px; height: 140px;
+		}
+		.cselection{
+			width: 350px;
+			height: 300px;
+			border: 2px dashed;
+			margin: auto;
+			border-radius: 10px;
+			margin-top: 10px;
+		}
+		.cselection h3{
+			font-size: 1.3em;
+			text-align: center;
+		}
+
+		.cselection img{
+			display: inline-block;
+			margin-left: 5px;
+			width: 100px; height: 140px;
+		}
+		#template{
+			width: 325px; height: 210px;
+			overflow: auto;
+		}
+		.selection img:hover{
+			border: 2px dashed;
+			padding: 3px;
+		}
+
+		#btn{
+			margin-top: 10px; margin-left: auto; margin-right: auto;
+			display: block;
+		}
+
+		.send_box{
+			width: 400px; height: 70px;
+			display: block;
+			margin-top: 20px; margin-left: auto; margin-right: 20px;
+			border: 5px dashed black;
+			border-radius: 20px;
+		}
+
+		.send_box input, .send_box button{
+			display: block;
+			margin-top: 5px; margin-left: auto; margin-right: auto;
+		}
+		.main{
+			height: 90vh;
+			flex: 80%;
+			float: right;
+		}
+
+		.edit_box1{
+			width: 600px; height: 700px;
+			background-color: white;
+			background-size: 100% 100%;
+			margin: 50px auto auto auto; 
+			display: block;
+			border: 1px solid black;
+			text-align: center;
+			vertical-align: center;
+		}
+
+		.edit_box1 h3{
+			font-size: 1em;
+			font-family: sans-serif;
+		}
+
+		.names{
+			margin-left: auto; margin-right: auto;
+			display: block;
+			width: 340px; border: none;
+			font-size: 1.2em;
+		}
+
+		.names[placeholder]:empty:before, .edit_box1 h2[placeholder]:empty:before{
+			content: attr(placeholder);
+			color: #555;
+		}
+
+		#gresult{
+			margin-top: 120px;
+
+		}
+
+		#e1{
+			font-size: 2em;
+			font-family: tahoma;
+		}
+
+		.send_box{
+			width: 300px; height: 60px;
+			display: block;
+			margin-top: 20px; margin-left: auto; margin-right: auto;
+			border:1px dashed black;
+		}
+
+		.send_box input, .send_box button{
+			display: block;
+			margin-top: 5px; margin-left: auto; margin-right: auto;
+		}
+
+		@media screen and (max-width:600px){
+			.main{
+				margin-bottom: 60px;
+			}
+
+			.edit_box1{
+				background-size: 100% 100%;
+				width: 380px; height: 600px;
+				margin-bottom: 70px;
+				font-size: 0.8em;
+			}
+
+			.edit_box1 h1, h2{
+				font-size: 1.2em;
+			}
+
+			#gresult{
+				margin-top: 70px;
+			}
+			.side{
+				margin-left: auto;
+			}
+			.greetingsList{
+				height: 230px;
+				margin-left: auto;
+
+			}
+
+			.greetingsList h3{
+				font-size: 1.2em;
+			}
+
+			.enter{
+				width: 500px; height: 200px;
+				margin-left: auto; margin-right: auto;
+				display: block;
+			}
+
+			.enter input, button, select{
+				width: 170px;
+				margin-left: 10px;
+				display: inline-block;
+			}
+
+			#e1{
+			font-size: 1.2em;
+			}
+
+			.selection{
+				margin-top: 10px;
+			}
+		}
+		.popup {
+  			display: none; 
+  			position: fixed; 
+  			left: 0;
+  			top: 0;
+  			width: 100%; height: 100%; 
+  			padding-top: 100px;
+  			text-align: center; 
+  			font-size: 1.3em; 
+ 
+		}
+
+		.popup-content {
+  			background-color: #A69F98;
+  			padding: 10px;
+  			border: 2px solid;
+  			border-radius: 10px;
+  			width: 60%;
+  			margin: auto;
+		}
+
+		.close {
+  			color: black;
+  			float: right;
+  			font-size: 28px;
+  			font-weight: bold;
+		}
+
+		.close:hover, .close:focus {
+  			color: red;
+  			text-decoration: none;
+  			cursor: pointer;
+		}
